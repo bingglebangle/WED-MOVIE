@@ -1,0 +1,50 @@
+--drop table reservation purge;
+
+create table reservation(
+    image varchar2(100), 
+    mvname varchar2(100),
+    cal varchar2(100),
+    time varchar2(100),
+    room varchar2(100),
+    count varchar2(100),
+    seatnum varchar2(100),
+    id varchar2(100)
+   );
+   
+select * from reservation where id = 0;
+-- 테이블 확인
+select * from tab;
+
+-- 테이블 구조 확인
+desc tot;
+
+-- 입력
+select * from reservation ; 
+insert into reservation  values('image','mvname','cal','time','room','0','aa','0');
+insert into reservation  values('','','','','','','','name');
+
+INSERT INTO reservation (image, mvname, cal, time, room, count, seatnum) VALUES ('image', 'mvname', 'cal', 'time', 'room', '0', 'aa') WHERE id = 'name';
+-- tot set id ='idname' where ;
+delete reservation where count = '인원   1명';
+commit;
+-- 테이블 삭제
+--drop table tot purge;
+
+
+
+
+create table snackback (  
+     num number,            -- 주문번호
+   foodname varchar2(25),   -- 음식 이름
+   price number,            -- 가격
+   amount NUMBER CHECK (amount >= 0),
+    pricetot number,
+    id varchar2(25)
+   );  
+   
+insert into snackback values(0,'탄산음료L',3500,1,3500,'0');
+select * from snackback;
+
+--delete snackback where foodname = '라지콤보';
+
+commit;
